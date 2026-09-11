@@ -5,40 +5,41 @@ title: "Presidential Approval Ratings"
 ```{r}
 #| message: false
 #| echo: false
+#| fig-height: 18
+#| fig-width: 10
 
 library(tidyverse)
 
-# Clean percentage strings and order presidents by average rating
-approval_data <- read_csv("data/presidential_approval.csv", show_col_types = FALSE) |>
-  mutate(
-    Avg = parse_number(Avg),
-    President = fct_reorder(President, Avg),
-    Party = if_else(Party == "D", "Democrat", "Republican")
-  )
+# Load monthly approval data and order presidents chronologically
+monthly_data <- read_csv("data/presidential_approval_by_month.csv", show_col_types = FALSE) |>
+  mutate(president = fct_reorder(president, year_month, .fun = min))
 
-# Simple horizontal bar chart of average approval ratings
-ggplot(approval_data, aes(x = Avg, y = President, fill = Party)) +
-  geom_col(width = 0.7) +
-  geom_text(aes(label = paste0(Avg, "%")), hjust = -0.2, size = 3.5) +
-  geom_vline(xintercept = 50, linetype = "dashed", color = "grey50") +
-  scale_fill_manual(values = c("Democrat" = "#2E74C0", "Republican" = "#CB454A")) +
-  scale_x_continuous(
-    breaks = seq(0, 75, by = 5),
-    labels = \(x) paste0(x, "%"),
-    limits = c(0, 76),
-    expand = expansion(mult = c(0, 0.02))
+# Separate panel for each president tracking monthly approval
+ggplot(monthly_data, aes(x = year_month, y = approval, color = party)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.2, alpha = 0.6) +
+  geom_hline(yintercept = 50, linetype = "dashed", color = "grey60") +
+  scale_color_manual(values = c("Democrat" = "#2E74C0", "Republican" = "#CB454A")) +
+  scale_y_continuous(
+    breaks = seq(20, 95, by = 5),
+    labels = \(y) paste0(y, "%"),
+    limits = c(20, 95)
   ) +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  facet_wrap(~president, scales = "free_x", ncol = 2) +
   labs(
-    title = "Average U.S. Presidential Approval Rating",
-    subtitle = "Dashed line indicates 50% approval mark",
-    x = "Average Approval Rating",
-    y = NULL,
-    fill = "Party",
-    caption = "Source: Dave Manuel (Gallup data)"
+    title = "U.S. Presidential Approval Rating by Month (1945–2025)",
+    subtitle = "Monthly Gallup approval rating by president; dashed line marks 50% benchmark",
+    x = "Date",
+    y = "Approval Rating",
+    color = "Party",
+    caption = "Source: Gallup Polls via DataCamp & American Presidency Project"
   ) +
-  theme_minimal() +
+  theme_minimal(base_size = 11) +
   theme(
     legend.position = "bottom",
-    panel.grid.major.y = element_blank()
+    panel.grid.minor = element_blank(),
+    strip.text = element_text(face = "bold", size = 12),
+    axis.text.y = element_text(size = 8)
   )
 ```

@@ -1,0 +1,874 @@
+president,party,year_month,approval
+Harry Truman,Democrat,1945-05-01,86
+Harry Truman,Democrat,1945-08-01,91
+Harry Truman,Democrat,1945-10-01,77.5
+Harry Truman,Democrat,1946-01-01,63
+Harry Truman,Democrat,1946-02-01,48
+Harry Truman,Democrat,1946-03-01,50
+Harry Truman,Democrat,1946-05-01,45
+Harry Truman,Democrat,1946-06-01,45
+Harry Truman,Democrat,1946-09-01,33
+Harry Truman,Democrat,1946-10-01,27
+Harry Truman,Democrat,1946-11-01,34
+Harry Truman,Democrat,1947-01-01,49
+Harry Truman,Democrat,1947-03-01,60.5
+Harry Truman,Democrat,1947-04-01,57
+Harry Truman,Democrat,1947-05-01,64
+Harry Truman,Democrat,1947-06-01,55
+Harry Truman,Democrat,1947-07-01,59
+Harry Truman,Democrat,1947-09-01,55
+Harry Truman,Democrat,1947-12-01,53
+Harry Truman,Democrat,1948-04-01,36
+Harry Truman,Democrat,1948-06-01,38
+Harry Truman,Democrat,1949-01-01,67
+Harry Truman,Democrat,1949-03-01,56
+Harry Truman,Democrat,1949-04-01,50
+Harry Truman,Democrat,1949-06-01,56
+Harry Truman,Democrat,1949-10-01,48
+Harry Truman,Democrat,1950-01-01,44
+Harry Truman,Democrat,1950-02-01,35
+Harry Truman,Democrat,1950-04-01,39
+Harry Truman,Democrat,1950-05-01,40
+Harry Truman,Democrat,1950-06-01,36
+Harry Truman,Democrat,1950-07-01,42
+Harry Truman,Democrat,1950-08-01,42
+Harry Truman,Democrat,1950-09-01,34
+Harry Truman,Democrat,1950-10-01,39.3
+Harry Truman,Democrat,1950-12-01,33
+Harry Truman,Democrat,1951-02-01,25
+Harry Truman,Democrat,1951-03-01,26.5
+Harry Truman,Democrat,1951-04-01,24
+Harry Truman,Democrat,1951-05-01,23
+Harry Truman,Democrat,1951-06-01,24
+Harry Truman,Democrat,1951-07-01,28
+Harry Truman,Democrat,1951-08-01,29
+Harry Truman,Democrat,1951-10-01,27
+Harry Truman,Democrat,1951-11-01,22
+Harry Truman,Democrat,1952-01-01,23
+Harry Truman,Democrat,1952-02-01,22
+Harry Truman,Democrat,1952-04-01,28
+Harry Truman,Democrat,1952-05-01,28
+Harry Truman,Democrat,1952-07-01,28
+Harry Truman,Democrat,1952-10-01,31.3
+Harry Truman,Democrat,1952-12-01,32
+Dwight Eisenhower,Republican,1953-02-01,67
+Dwight Eisenhower,Republican,1953-04-01,73
+Dwight Eisenhower,Republican,1953-05-01,73
+Dwight Eisenhower,Republican,1953-07-01,72
+Dwight Eisenhower,Republican,1953-08-01,73
+Dwight Eisenhower,Republican,1953-09-01,60
+Dwight Eisenhower,Republican,1953-10-01,64
+Dwight Eisenhower,Republican,1953-11-01,61
+Dwight Eisenhower,Republican,1953-12-01,68
+Dwight Eisenhower,Republican,1954-01-01,70
+Dwight Eisenhower,Republican,1954-02-01,66
+Dwight Eisenhower,Republican,1954-03-01,64
+Dwight Eisenhower,Republican,1954-04-01,64
+Dwight Eisenhower,Republican,1954-05-01,61
+Dwight Eisenhower,Republican,1954-06-01,62.5
+Dwight Eisenhower,Republican,1954-07-01,74
+Dwight Eisenhower,Republican,1954-08-01,64
+Dwight Eisenhower,Republican,1954-09-01,65
+Dwight Eisenhower,Republican,1954-10-01,61
+Dwight Eisenhower,Republican,1954-11-01,62.5
+Dwight Eisenhower,Republican,1955-01-01,69
+Dwight Eisenhower,Republican,1955-02-01,72
+Dwight Eisenhower,Republican,1955-03-01,67
+Dwight Eisenhower,Republican,1955-04-01,69
+Dwight Eisenhower,Republican,1955-05-01,67
+Dwight Eisenhower,Republican,1955-06-01,68
+Dwight Eisenhower,Republican,1955-07-01,72
+Dwight Eisenhower,Republican,1955-08-01,72.5
+Dwight Eisenhower,Republican,1955-09-01,70
+Dwight Eisenhower,Republican,1955-11-01,77
+Dwight Eisenhower,Republican,1955-12-01,74
+Dwight Eisenhower,Republican,1956-01-01,76
+Dwight Eisenhower,Republican,1956-02-01,74
+Dwight Eisenhower,Republican,1956-03-01,72
+Dwight Eisenhower,Republican,1956-04-01,72
+Dwight Eisenhower,Republican,1956-05-01,70
+Dwight Eisenhower,Republican,1956-06-01,72
+Dwight Eisenhower,Republican,1956-07-01,69
+Dwight Eisenhower,Republican,1956-08-01,67
+Dwight Eisenhower,Republican,1956-11-01,74
+Dwight Eisenhower,Republican,1956-12-01,77
+Dwight Eisenhower,Republican,1957-01-01,73
+Dwight Eisenhower,Republican,1957-02-01,72
+Dwight Eisenhower,Republican,1957-03-01,68
+Dwight Eisenhower,Republican,1957-04-01,64
+Dwight Eisenhower,Republican,1957-05-01,61
+Dwight Eisenhower,Republican,1957-06-01,63
+Dwight Eisenhower,Republican,1957-07-01,64
+Dwight Eisenhower,Republican,1957-08-01,62
+Dwight Eisenhower,Republican,1957-09-01,57
+Dwight Eisenhower,Republican,1957-10-01,56
+Dwight Eisenhower,Republican,1957-11-01,57
+Dwight Eisenhower,Republican,1957-12-01,60
+Dwight Eisenhower,Republican,1958-01-01,57
+Dwight Eisenhower,Republican,1958-02-01,54
+Dwight Eisenhower,Republican,1958-03-01,48.5
+Dwight Eisenhower,Republican,1958-04-01,54
+Dwight Eisenhower,Republican,1958-05-01,52
+Dwight Eisenhower,Republican,1958-07-01,52
+Dwight Eisenhower,Republican,1958-08-01,56
+Dwight Eisenhower,Republican,1958-09-01,54.5
+Dwight Eisenhower,Republican,1958-10-01,56
+Dwight Eisenhower,Republican,1958-11-01,51
+Dwight Eisenhower,Republican,1958-12-01,56
+Dwight Eisenhower,Republican,1959-01-01,56
+Dwight Eisenhower,Republican,1959-02-01,58
+Dwight Eisenhower,Republican,1959-03-01,60
+Dwight Eisenhower,Republican,1959-04-01,59
+Dwight Eisenhower,Republican,1959-06-01,62.5
+Dwight Eisenhower,Republican,1959-07-01,60
+Dwight Eisenhower,Republican,1959-09-01,66
+Dwight Eisenhower,Republican,1959-10-01,66
+Dwight Eisenhower,Republican,1959-11-01,64
+Dwight Eisenhower,Republican,1959-12-01,71
+Dwight Eisenhower,Republican,1960-01-01,66
+Dwight Eisenhower,Republican,1960-02-01,63
+Dwight Eisenhower,Republican,1960-03-01,64
+Dwight Eisenhower,Republican,1960-04-01,61
+Dwight Eisenhower,Republican,1960-05-01,64
+Dwight Eisenhower,Republican,1960-06-01,58.5
+Dwight Eisenhower,Republican,1960-07-01,55.5
+Dwight Eisenhower,Republican,1960-08-01,61.5
+Dwight Eisenhower,Republican,1960-09-01,61
+Dwight Eisenhower,Republican,1960-10-01,57
+Dwight Eisenhower,Republican,1960-11-01,59
+Dwight Eisenhower,Republican,1960-12-01,63.5
+John F. Kennedy,Democrat,1961-02-01,72
+John F. Kennedy,Democrat,1961-03-01,72
+John F. Kennedy,Democrat,1961-04-01,78
+John F. Kennedy,Democrat,1961-05-01,78
+John F. Kennedy,Democrat,1961-06-01,72
+John F. Kennedy,Democrat,1961-07-01,74
+John F. Kennedy,Democrat,1961-08-01,75
+John F. Kennedy,Democrat,1961-09-01,78
+John F. Kennedy,Democrat,1961-10-01,76
+John F. Kennedy,Democrat,1961-11-01,79
+John F. Kennedy,Democrat,1961-12-01,76
+John F. Kennedy,Democrat,1962-01-01,78
+John F. Kennedy,Democrat,1962-02-01,77
+John F. Kennedy,Democrat,1962-03-01,79
+John F. Kennedy,Democrat,1962-04-01,77
+John F. Kennedy,Democrat,1962-05-01,71.5
+John F. Kennedy,Democrat,1962-07-01,66.5
+John F. Kennedy,Democrat,1962-08-01,67
+John F. Kennedy,Democrat,1962-09-01,62
+John F. Kennedy,Democrat,1962-10-01,60
+John F. Kennedy,Democrat,1962-11-01,72
+John F. Kennedy,Democrat,1962-12-01,75
+John F. Kennedy,Democrat,1963-01-01,73
+John F. Kennedy,Democrat,1963-02-01,70
+John F. Kennedy,Democrat,1963-03-01,66
+John F. Kennedy,Democrat,1963-04-01,65
+John F. Kennedy,Democrat,1963-05-01,63.3
+John F. Kennedy,Democrat,1963-07-01,60
+John F. Kennedy,Democrat,1963-08-01,62
+John F. Kennedy,Democrat,1963-09-01,56
+John F. Kennedy,Democrat,1963-10-01,58
+John F. Kennedy,Democrat,1963-11-01,58
+Lyndon Johnson,Democrat,1963-12-01,75
+Lyndon Johnson,Democrat,1964-01-01,76
+Lyndon Johnson,Democrat,1964-02-01,74
+Lyndon Johnson,Democrat,1964-03-01,78
+Lyndon Johnson,Democrat,1964-04-01,74.5
+Lyndon Johnson,Democrat,1964-05-01,74
+Lyndon Johnson,Democrat,1964-06-01,73.3
+Lyndon Johnson,Democrat,1964-11-01,68
+Lyndon Johnson,Democrat,1965-01-01,70
+Lyndon Johnson,Democrat,1965-02-01,69
+Lyndon Johnson,Democrat,1965-03-01,69
+Lyndon Johnson,Democrat,1965-04-01,64.5
+Lyndon Johnson,Democrat,1965-05-01,70
+Lyndon Johnson,Democrat,1965-06-01,66.5
+Lyndon Johnson,Democrat,1965-07-01,65
+Lyndon Johnson,Democrat,1965-08-01,65
+Lyndon Johnson,Democrat,1965-09-01,63
+Lyndon Johnson,Democrat,1965-10-01,65
+Lyndon Johnson,Democrat,1965-11-01,63
+Lyndon Johnson,Democrat,1965-12-01,63
+Lyndon Johnson,Democrat,1966-01-01,60
+Lyndon Johnson,Democrat,1966-02-01,55
+Lyndon Johnson,Democrat,1966-03-01,56.5
+Lyndon Johnson,Democrat,1966-04-01,53
+Lyndon Johnson,Democrat,1966-05-01,48
+Lyndon Johnson,Democrat,1966-06-01,48
+Lyndon Johnson,Democrat,1966-07-01,55
+Lyndon Johnson,Democrat,1966-08-01,48.5
+Lyndon Johnson,Democrat,1966-10-01,44
+Lyndon Johnson,Democrat,1966-11-01,48
+Lyndon Johnson,Democrat,1966-12-01,43
+Lyndon Johnson,Democrat,1967-01-01,45.5
+Lyndon Johnson,Democrat,1967-02-01,44
+Lyndon Johnson,Democrat,1967-03-01,44
+Lyndon Johnson,Democrat,1967-04-01,46.5
+Lyndon Johnson,Democrat,1967-05-01,41
+Lyndon Johnson,Democrat,1967-06-01,46.5
+Lyndon Johnson,Democrat,1967-07-01,46
+Lyndon Johnson,Democrat,1967-08-01,38.5
+Lyndon Johnson,Democrat,1967-09-01,37
+Lyndon Johnson,Democrat,1967-10-01,37
+Lyndon Johnson,Democrat,1967-11-01,40.5
+Lyndon Johnson,Democrat,1967-12-01,44
+Lyndon Johnson,Democrat,1968-01-01,48
+Lyndon Johnson,Democrat,1968-02-01,40.5
+Lyndon Johnson,Democrat,1968-04-01,50
+Lyndon Johnson,Democrat,1968-05-01,43
+Lyndon Johnson,Democrat,1968-06-01,42
+Lyndon Johnson,Democrat,1968-07-01,39
+Lyndon Johnson,Democrat,1968-08-01,34
+Lyndon Johnson,Democrat,1968-10-01,41
+Lyndon Johnson,Democrat,1968-11-01,43
+Lyndon Johnson,Democrat,1968-12-01,44
+Lyndon Johnson,Democrat,1969-01-01,49
+Richard Nixon,Republican,1969-01-01,59
+Richard Nixon,Republican,1969-02-01,59
+Richard Nixon,Republican,1969-03-01,65
+Richard Nixon,Republican,1969-04-01,59
+Richard Nixon,Republican,1969-05-01,61
+Richard Nixon,Republican,1969-06-01,63
+Richard Nixon,Republican,1969-07-01,59.5
+Richard Nixon,Republican,1969-08-01,58
+Richard Nixon,Republican,1969-09-01,55
+Richard Nixon,Republican,1969-10-01,54
+Richard Nixon,Republican,1969-11-01,64
+Richard Nixon,Republican,1969-12-01,54.5
+Richard Nixon,Republican,1970-01-01,57
+Richard Nixon,Republican,1970-02-01,60
+Richard Nixon,Republican,1970-03-01,54
+Richard Nixon,Republican,1970-04-01,56
+Richard Nixon,Republican,1970-05-01,58
+Richard Nixon,Republican,1970-06-01,54
+Richard Nixon,Republican,1970-07-01,60
+Richard Nixon,Republican,1970-08-01,54
+Richard Nixon,Republican,1970-09-01,54
+Richard Nixon,Republican,1970-10-01,57
+Richard Nixon,Republican,1970-11-01,56
+Richard Nixon,Republican,1970-12-01,48
+Richard Nixon,Republican,1971-01-01,55
+Richard Nixon,Republican,1971-02-01,49
+Richard Nixon,Republican,1971-03-01,48.5
+Richard Nixon,Republican,1971-04-01,47
+Richard Nixon,Republican,1971-05-01,40
+Richard Nixon,Republican,1971-06-01,43.5
+Richard Nixon,Republican,1971-07-01,47
+Richard Nixon,Republican,1971-08-01,47
+Richard Nixon,Republican,1971-10-01,50
+Richard Nixon,Republican,1971-11-01,49
+Richard Nixon,Republican,1971-12-01,49
+Richard Nixon,Republican,1972-01-01,49
+Richard Nixon,Republican,1972-02-01,53
+Richard Nixon,Republican,1972-03-01,52
+Richard Nixon,Republican,1972-04-01,53
+Richard Nixon,Republican,1972-05-01,61
+Richard Nixon,Republican,1972-06-01,57.5
+Richard Nixon,Republican,1972-11-01,62
+Richard Nixon,Republican,1972-12-01,59
+Richard Nixon,Republican,1973-01-01,58.5
+Richard Nixon,Republican,1973-02-01,65
+Richard Nixon,Republican,1973-03-01,57
+Richard Nixon,Republican,1973-04-01,50
+Richard Nixon,Republican,1973-05-01,43.5
+Richard Nixon,Republican,1973-07-01,39
+Richard Nixon,Republican,1973-08-01,36
+Richard Nixon,Republican,1973-09-01,32.5
+Richard Nixon,Republican,1973-10-01,27.3
+Richard Nixon,Republican,1973-11-01,30
+Richard Nixon,Republican,1973-12-01,28
+Richard Nixon,Republican,1974-01-01,25.3
+Richard Nixon,Republican,1974-02-01,25.5
+Richard Nixon,Republican,1974-03-01,25.5
+Richard Nixon,Republican,1974-04-01,25.3
+Richard Nixon,Republican,1974-05-01,25.7
+Richard Nixon,Republican,1974-06-01,26
+Richard Nixon,Republican,1974-07-01,23
+Gerald Ford,Republican,1974-08-01,70
+Richard Nixon,Republican,1974-08-01,24
+Gerald Ford,Republican,1974-09-01,57.5
+Gerald Ford,Republican,1974-10-01,52.5
+Gerald Ford,Republican,1974-11-01,47.5
+Gerald Ford,Republican,1974-12-01,42
+Gerald Ford,Republican,1975-01-01,37.5
+Gerald Ford,Republican,1975-02-01,38
+Gerald Ford,Republican,1975-03-01,37
+Gerald Ford,Republican,1975-04-01,41
+Gerald Ford,Republican,1975-05-01,44.5
+Gerald Ford,Republican,1975-06-01,51
+Gerald Ford,Republican,1975-07-01,45
+Gerald Ford,Republican,1975-08-01,46
+Gerald Ford,Republican,1975-09-01,44
+Gerald Ford,Republican,1975-10-01,45.7
+Gerald Ford,Republican,1975-11-01,41
+Gerald Ford,Republican,1975-12-01,43
+Gerald Ford,Republican,1976-01-01,46
+Gerald Ford,Republican,1976-03-01,50
+Gerald Ford,Republican,1976-04-01,48
+Gerald Ford,Republican,1976-05-01,47
+Gerald Ford,Republican,1976-06-01,45
+Gerald Ford,Republican,1977-01-01,44
+Jimmy Carter,Democrat,1977-02-01,68.5
+Jimmy Carter,Democrat,1977-03-01,70.5
+Jimmy Carter,Democrat,1977-04-01,63
+Jimmy Carter,Democrat,1977-05-01,63.2
+Jimmy Carter,Democrat,1977-06-01,63
+Jimmy Carter,Democrat,1977-07-01,64
+Jimmy Carter,Democrat,1977-08-01,62.5
+Jimmy Carter,Democrat,1977-09-01,56
+Jimmy Carter,Democrat,1977-10-01,53
+Jimmy Carter,Democrat,1977-11-01,54.5
+Jimmy Carter,Democrat,1977-12-01,56
+Jimmy Carter,Democrat,1978-01-01,52.5
+Jimmy Carter,Democrat,1978-02-01,48
+Jimmy Carter,Democrat,1978-03-01,48
+Jimmy Carter,Democrat,1978-04-01,40.5
+Jimmy Carter,Democrat,1978-05-01,42
+Jimmy Carter,Democrat,1978-06-01,42
+Jimmy Carter,Democrat,1978-07-01,39
+Jimmy Carter,Democrat,1978-08-01,40.3
+Jimmy Carter,Democrat,1978-09-01,44.3
+Jimmy Carter,Democrat,1978-10-01,49
+Jimmy Carter,Democrat,1978-11-01,50
+Jimmy Carter,Democrat,1978-12-01,51
+Jimmy Carter,Democrat,1979-01-01,45
+Jimmy Carter,Democrat,1979-02-01,38
+Jimmy Carter,Democrat,1979-03-01,44
+Jimmy Carter,Democrat,1979-04-01,40
+Jimmy Carter,Democrat,1979-05-01,32.7
+Jimmy Carter,Democrat,1979-06-01,28.5
+Jimmy Carter,Democrat,1979-07-01,31
+Jimmy Carter,Democrat,1979-08-01,32.5
+Jimmy Carter,Democrat,1979-09-01,30.5
+Jimmy Carter,Democrat,1979-10-01,30
+Jimmy Carter,Democrat,1979-11-01,44
+Jimmy Carter,Democrat,1979-12-01,54
+Jimmy Carter,Democrat,1980-01-01,56
+Jimmy Carter,Democrat,1980-02-01,51
+Jimmy Carter,Democrat,1980-03-01,40.5
+Jimmy Carter,Democrat,1980-04-01,40
+Jimmy Carter,Democrat,1980-05-01,38
+Jimmy Carter,Democrat,1980-06-01,31
+Jimmy Carter,Democrat,1980-07-01,32
+Jimmy Carter,Democrat,1980-08-01,32
+Jimmy Carter,Democrat,1980-09-01,37
+Jimmy Carter,Democrat,1980-11-01,31
+Jimmy Carter,Democrat,1980-12-01,34
+Ronald Reagan,Republican,1981-02-01,53
+Ronald Reagan,Republican,1981-03-01,66
+Ronald Reagan,Republican,1981-04-01,66
+Ronald Reagan,Republican,1981-05-01,68
+Ronald Reagan,Republican,1981-06-01,57.7
+Ronald Reagan,Republican,1981-07-01,57
+Ronald Reagan,Republican,1981-08-01,59
+Ronald Reagan,Republican,1981-09-01,51
+Ronald Reagan,Republican,1981-11-01,52
+Ronald Reagan,Republican,1981-12-01,48
+Ronald Reagan,Republican,1982-01-01,48
+Ronald Reagan,Republican,1982-02-01,46
+Ronald Reagan,Republican,1982-03-01,46
+Ronald Reagan,Republican,1982-04-01,44
+Ronald Reagan,Republican,1982-05-01,44
+Ronald Reagan,Republican,1982-06-01,44
+Ronald Reagan,Republican,1982-07-01,42
+Ronald Reagan,Republican,1982-08-01,40.3
+Ronald Reagan,Republican,1982-09-01,42
+Ronald Reagan,Republican,1982-10-01,41
+Ronald Reagan,Republican,1982-11-01,42.5
+Ronald Reagan,Republican,1982-12-01,41
+Ronald Reagan,Republican,1983-01-01,36
+Ronald Reagan,Republican,1983-03-01,40
+Ronald Reagan,Republican,1983-04-01,40
+Ronald Reagan,Republican,1983-05-01,43.3
+Ronald Reagan,Republican,1983-06-01,44.5
+Ronald Reagan,Republican,1983-07-01,42
+Ronald Reagan,Republican,1983-08-01,43
+Ronald Reagan,Republican,1983-09-01,47
+Ronald Reagan,Republican,1983-10-01,45
+Ronald Reagan,Republican,1983-11-01,52
+Ronald Reagan,Republican,1983-12-01,53
+Ronald Reagan,Republican,1984-01-01,53.5
+Ronald Reagan,Republican,1984-02-01,53.5
+Ronald Reagan,Republican,1984-03-01,52.5
+Ronald Reagan,Republican,1984-04-01,51
+Ronald Reagan,Republican,1984-05-01,51
+Ronald Reagan,Republican,1984-06-01,53
+Ronald Reagan,Republican,1984-07-01,52.6
+Ronald Reagan,Republican,1984-08-01,53
+Ronald Reagan,Republican,1984-09-01,56
+Ronald Reagan,Republican,1984-10-01,55.5
+Ronald Reagan,Republican,1984-11-01,61
+Ronald Reagan,Republican,1984-12-01,60
+Ronald Reagan,Republican,1985-01-01,61
+Ronald Reagan,Republican,1985-02-01,59
+Ronald Reagan,Republican,1985-03-01,56
+Ronald Reagan,Republican,1985-04-01,53
+Ronald Reagan,Republican,1985-05-01,55
+Ronald Reagan,Republican,1985-06-01,61
+Ronald Reagan,Republican,1985-07-01,64.5
+Ronald Reagan,Republican,1985-08-01,62.7
+Ronald Reagan,Republican,1985-10-01,62
+Ronald Reagan,Republican,1985-11-01,66.7
+Ronald Reagan,Republican,1986-01-01,67
+Ronald Reagan,Republican,1986-03-01,63
+Ronald Reagan,Republican,1986-04-01,63
+Ronald Reagan,Republican,1986-05-01,67
+Ronald Reagan,Republican,1986-06-01,67
+Ronald Reagan,Republican,1986-07-01,63
+Ronald Reagan,Republican,1986-08-01,63
+Ronald Reagan,Republican,1986-09-01,62
+Ronald Reagan,Republican,1986-10-01,64
+Ronald Reagan,Republican,1986-12-01,47
+Ronald Reagan,Republican,1987-01-01,49.7
+Ronald Reagan,Republican,1987-02-01,40
+Ronald Reagan,Republican,1987-03-01,46
+Ronald Reagan,Republican,1987-04-01,47.5
+Ronald Reagan,Republican,1987-05-01,49
+Ronald Reagan,Republican,1987-06-01,45
+Ronald Reagan,Republican,1987-07-01,49
+Ronald Reagan,Republican,1987-09-01,49.5
+Ronald Reagan,Republican,1987-10-01,49.2
+Ronald Reagan,Republican,1987-11-01,52
+Ronald Reagan,Republican,1987-12-01,56
+Ronald Reagan,Republican,1988-02-01,52
+Ronald Reagan,Republican,1988-03-01,51
+Ronald Reagan,Republican,1988-05-01,49
+Ronald Reagan,Republican,1988-07-01,50
+Ronald Reagan,Republican,1988-09-01,53
+Ronald Reagan,Republican,1988-11-01,56
+Ronald Reagan,Republican,1988-12-01,63
+George H.W. Bush,Republican,1989-01-01,51
+George H.W. Bush,Republican,1989-02-01,60
+George H.W. Bush,Republican,1989-03-01,60
+George H.W. Bush,Republican,1989-04-01,55.5
+George H.W. Bush,Republican,1989-05-01,58.4
+George H.W. Bush,Republican,1989-06-01,64.7
+George H.W. Bush,Republican,1989-07-01,66
+George H.W. Bush,Republican,1989-08-01,64.3
+George H.W. Bush,Republican,1989-09-01,69
+George H.W. Bush,Republican,1989-10-01,64.5
+George H.W. Bush,Republican,1989-11-01,66
+George H.W. Bush,Republican,1989-12-01,71
+George H.W. Bush,Republican,1990-01-01,72.5
+George H.W. Bush,Republican,1990-02-01,73
+George H.W. Bush,Republican,1990-03-01,71
+George H.W. Bush,Republican,1990-04-01,69
+George H.W. Bush,Republican,1990-05-01,66
+George H.W. Bush,Republican,1990-06-01,69
+George H.W. Bush,Republican,1990-07-01,61.5
+George H.W. Bush,Republican,1990-08-01,71.4
+George H.W. Bush,Republican,1990-09-01,68.8
+George H.W. Bush,Republican,1990-10-01,58.2
+George H.W. Bush,Republican,1990-11-01,55
+George H.W. Bush,Republican,1990-12-01,60.6
+George H.W. Bush,Republican,1991-01-01,74.6
+George H.W. Bush,Republican,1991-02-01,78.2
+George H.W. Bush,Republican,1991-03-01,84.2
+George H.W. Bush,Republican,1991-04-01,77
+George H.W. Bush,Republican,1991-05-01,75.3
+George H.W. Bush,Republican,1991-06-01,71.2
+George H.W. Bush,Republican,1991-07-01,69.2
+George H.W. Bush,Republican,1991-08-01,69.8
+George H.W. Bush,Republican,1991-09-01,65.2
+George H.W. Bush,Republican,1991-10-01,64
+George H.W. Bush,Republican,1991-11-01,51
+George H.W. Bush,Republican,1992-01-01,44.7
+George H.W. Bush,Republican,1992-02-01,41.2
+George H.W. Bush,Republican,1992-03-01,40.6
+George H.W. Bush,Republican,1992-04-01,40.5
+George H.W. Bush,Republican,1992-05-01,40.3
+George H.W. Bush,Republican,1992-06-01,36
+George H.W. Bush,Republican,1992-07-01,33.3
+George H.W. Bush,Republican,1992-08-01,35
+George H.W. Bush,Republican,1992-09-01,37.2
+George H.W. Bush,Republican,1992-10-01,33.2
+George H.W. Bush,Republican,1992-11-01,42
+George H.W. Bush,Republican,1992-12-01,48.5
+Bill Clinton,Democrat,1993-01-01,55.5
+George H.W. Bush,Republican,1993-01-01,56
+Bill Clinton,Democrat,1993-02-01,54.5
+Bill Clinton,Democrat,1993-03-01,52
+Bill Clinton,Democrat,1993-04-01,55
+Bill Clinton,Democrat,1993-05-01,44
+Bill Clinton,Democrat,1993-06-01,39.7
+Bill Clinton,Democrat,1993-07-01,45
+Bill Clinton,Democrat,1993-08-01,43.5
+Bill Clinton,Democrat,1993-09-01,49.3
+Bill Clinton,Democrat,1993-10-01,48
+Bill Clinton,Democrat,1993-11-01,47.7
+Bill Clinton,Democrat,1993-12-01,49.5
+Bill Clinton,Democrat,1994-01-01,54.7
+Bill Clinton,Democrat,1994-02-01,53
+Bill Clinton,Democrat,1994-03-01,50.5
+Bill Clinton,Democrat,1994-04-01,49
+Bill Clinton,Democrat,1994-05-01,50
+Bill Clinton,Democrat,1994-06-01,46
+Bill Clinton,Democrat,1994-07-01,42.5
+Bill Clinton,Democrat,1994-08-01,41
+Bill Clinton,Democrat,1994-09-01,41.3
+Bill Clinton,Democrat,1994-10-01,43.3
+Bill Clinton,Democrat,1994-11-01,44
+Bill Clinton,Democrat,1994-12-01,41.3
+Bill Clinton,Democrat,1995-01-01,46
+Bill Clinton,Democrat,1995-02-01,45
+Bill Clinton,Democrat,1995-03-01,43.5
+Bill Clinton,Democrat,1995-04-01,47.3
+Bill Clinton,Democrat,1995-05-01,50
+Bill Clinton,Democrat,1995-06-01,46
+Bill Clinton,Democrat,1995-07-01,46.5
+Bill Clinton,Democrat,1995-08-01,45
+Bill Clinton,Democrat,1995-09-01,45
+Bill Clinton,Democrat,1995-10-01,47.5
+Bill Clinton,Democrat,1995-11-01,52.5
+Bill Clinton,Democrat,1995-12-01,50
+Bill Clinton,Democrat,1996-01-01,46.7
+Bill Clinton,Democrat,1996-02-01,53
+Bill Clinton,Democrat,1996-03-01,53
+Bill Clinton,Democrat,1996-04-01,54.5
+Bill Clinton,Democrat,1996-05-01,53.5
+Bill Clinton,Democrat,1996-06-01,54
+Bill Clinton,Democrat,1996-07-01,56.5
+Bill Clinton,Democrat,1996-08-01,53.7
+Bill Clinton,Democrat,1996-09-01,60
+Bill Clinton,Democrat,1996-10-01,56
+Bill Clinton,Democrat,1996-11-01,57
+Bill Clinton,Democrat,1996-12-01,57
+Bill Clinton,Democrat,1997-01-01,59
+Bill Clinton,Democrat,1997-02-01,57.5
+Bill Clinton,Democrat,1997-03-01,59
+Bill Clinton,Democrat,1997-04-01,54
+Bill Clinton,Democrat,1997-05-01,57
+Bill Clinton,Democrat,1997-06-01,55.5
+Bill Clinton,Democrat,1997-07-01,58
+Bill Clinton,Democrat,1997-08-01,60
+Bill Clinton,Democrat,1997-09-01,58.5
+Bill Clinton,Democrat,1997-10-01,56.5
+Bill Clinton,Democrat,1997-11-01,59
+Bill Clinton,Democrat,1997-12-01,55
+Bill Clinton,Democrat,1998-01-01,60.6
+Bill Clinton,Democrat,1998-02-01,66.3
+Bill Clinton,Democrat,1998-03-01,64.7
+Bill Clinton,Democrat,1998-04-01,65
+Bill Clinton,Democrat,1998-05-01,64
+Bill Clinton,Democrat,1998-06-01,60
+Bill Clinton,Democrat,1998-07-01,62.7
+Bill Clinton,Democrat,1998-08-01,62.3
+Bill Clinton,Democrat,1998-09-01,62.3
+Bill Clinton,Democrat,1998-10-01,64.3
+Bill Clinton,Democrat,1998-11-01,65
+Bill Clinton,Democrat,1998-12-01,64
+Bill Clinton,Democrat,1999-01-01,67
+Bill Clinton,Democrat,1999-02-01,64.6
+Bill Clinton,Democrat,1999-03-01,64
+Bill Clinton,Democrat,1999-04-01,58.7
+Bill Clinton,Democrat,1999-05-01,58.7
+Bill Clinton,Democrat,1999-06-01,59
+Bill Clinton,Democrat,1999-07-01,59.7
+Bill Clinton,Democrat,1999-08-01,59.3
+Bill Clinton,Democrat,1999-09-01,59.5
+Bill Clinton,Democrat,1999-10-01,57.5
+Bill Clinton,Democrat,1999-11-01,58.5
+Bill Clinton,Democrat,1999-12-01,56.5
+Bill Clinton,Democrat,2000-01-01,61.8
+Bill Clinton,Democrat,2000-02-01,59.7
+Bill Clinton,Democrat,2000-03-01,59
+Bill Clinton,Democrat,2000-04-01,60
+Bill Clinton,Democrat,2000-05-01,57
+Bill Clinton,Democrat,2000-06-01,56.5
+Bill Clinton,Democrat,2000-07-01,58
+Bill Clinton,Democrat,2000-08-01,60.3
+Bill Clinton,Democrat,2000-09-01,61
+Bill Clinton,Democrat,2000-10-01,57
+Bill Clinton,Democrat,2000-11-01,63
+Bill Clinton,Democrat,2000-12-01,65
+Bill Clinton,Democrat,2001-01-01,64.5
+George W. Bush,Republican,2001-02-01,58.3
+George W. Bush,Republican,2001-03-01,57.3
+George W. Bush,Republican,2001-04-01,60.5
+George W. Bush,Republican,2001-05-01,54.7
+George W. Bush,Republican,2001-06-01,52.3
+George W. Bush,Republican,2001-07-01,54.7
+George W. Bush,Republican,2001-08-01,56
+George W. Bush,Republican,2001-09-01,75
+George W. Bush,Republican,2001-10-01,88
+George W. Bush,Republican,2001-11-01,86
+George W. Bush,Republican,2001-12-01,85
+George W. Bush,Republican,2002-01-01,83
+George W. Bush,Republican,2002-02-01,81
+George W. Bush,Republican,2002-03-01,78.4
+George W. Bush,Republican,2002-04-01,75
+George W. Bush,Republican,2002-05-01,76
+George W. Bush,Republican,2002-06-01,72.8
+George W. Bush,Republican,2002-07-01,70.6
+George W. Bush,Republican,2002-08-01,65
+George W. Bush,Republican,2002-09-01,66.8
+George W. Bush,Republican,2002-10-01,65
+George W. Bush,Republican,2002-11-01,65.7
+George W. Bush,Republican,2002-12-01,62.3
+George W. Bush,Republican,2003-01-01,59.6
+George W. Bush,Republican,2003-02-01,58.6
+George W. Bush,Republican,2003-03-01,64.8
+George W. Bush,Republican,2003-04-01,69.5
+George W. Bush,Republican,2003-05-01,67
+George W. Bush,Republican,2003-06-01,60.2
+George W. Bush,Republican,2003-07-01,60.5
+George W. Bush,Republican,2003-08-01,59.5
+George W. Bush,Republican,2003-09-01,50.5
+George W. Bush,Republican,2003-10-01,56
+George W. Bush,Republican,2003-11-01,51.5
+George W. Bush,Republican,2003-12-01,58.5
+George W. Bush,Republican,2004-01-01,57
+George W. Bush,Republican,2004-02-01,51.2
+George W. Bush,Republican,2004-03-01,51.7
+George W. Bush,Republican,2004-04-01,51
+George W. Bush,Republican,2004-05-01,46.7
+George W. Bush,Republican,2004-06-01,49
+George W. Bush,Republican,2004-07-01,47
+George W. Bush,Republican,2004-08-01,50
+George W. Bush,Republican,2004-09-01,51.7
+George W. Bush,Republican,2004-10-01,48.7
+George W. Bush,Republican,2004-11-01,53
+George W. Bush,Republican,2004-12-01,50.5
+George W. Bush,Republican,2005-01-01,51
+George W. Bush,Republican,2005-02-01,52
+George W. Bush,Republican,2005-03-01,51.5
+George W. Bush,Republican,2005-04-01,48
+George W. Bush,Republican,2005-05-01,47.2
+George W. Bush,Republican,2005-06-01,45
+George W. Bush,Republican,2005-07-01,48
+George W. Bush,Republican,2005-08-01,43
+George W. Bush,Republican,2005-09-01,43.5
+George W. Bush,Republican,2005-10-01,40
+George W. Bush,Republican,2005-11-01,38
+George W. Bush,Republican,2005-12-01,42.2
+George W. Bush,Republican,2006-01-01,43
+George W. Bush,Republican,2006-02-01,40.5
+George W. Bush,Republican,2006-03-01,37
+George W. Bush,Republican,2006-04-01,35.7
+George W. Bush,Republican,2006-05-01,32
+George W. Bush,Republican,2006-06-01,37
+George W. Bush,Republican,2006-07-01,39
+George W. Bush,Republican,2006-08-01,39.5
+George W. Bush,Republican,2006-09-01,41.5
+George W. Bush,Republican,2006-10-01,37
+George W. Bush,Republican,2006-11-01,35.5
+George W. Bush,Republican,2006-12-01,36.5
+George W. Bush,Republican,2007-01-01,35.5
+George W. Bush,Republican,2007-02-01,34.5
+George W. Bush,Republican,2007-03-01,34
+George W. Bush,Republican,2007-04-01,37
+George W. Bush,Republican,2007-05-01,33.5
+George W. Bush,Republican,2007-06-01,32
+George W. Bush,Republican,2007-07-01,30
+George W. Bush,Republican,2007-08-01,33
+George W. Bush,Republican,2007-09-01,34.5
+George W. Bush,Republican,2007-10-01,32
+George W. Bush,Republican,2007-11-01,31.5
+George W. Bush,Republican,2007-12-01,34.3
+George W. Bush,Republican,2008-01-01,33
+George W. Bush,Republican,2008-02-01,32.5
+George W. Bush,Republican,2008-03-01,32
+George W. Bush,Republican,2008-04-01,28
+George W. Bush,Republican,2008-05-01,28
+George W. Bush,Republican,2008-06-01,28.7
+George W. Bush,Republican,2008-07-01,31.5
+George W. Bush,Republican,2008-08-01,31
+George W. Bush,Republican,2008-09-01,30
+George W. Bush,Republican,2008-10-01,27
+George W. Bush,Republican,2008-11-01,27.3
+George W. Bush,Republican,2008-12-01,30.5
+Barack Obama,Democrat,2009-01-01,66.3
+George W. Bush,Republican,2009-01-01,34
+Barack Obama,Democrat,2009-02-01,64
+Barack Obama,Democrat,2009-03-01,61.9
+Barack Obama,Democrat,2009-04-01,62.6
+Barack Obama,Democrat,2009-05-01,64.7
+Barack Obama,Democrat,2009-06-01,60.7
+Barack Obama,Democrat,2009-07-01,57.5
+Barack Obama,Democrat,2009-08-01,53.3
+Barack Obama,Democrat,2009-09-01,52.1
+Barack Obama,Democrat,2009-10-01,52.8
+Barack Obama,Democrat,2009-11-01,51
+Barack Obama,Democrat,2009-12-01,50.2
+Barack Obama,Democrat,2010-01-01,49.4
+Barack Obama,Democrat,2010-02-01,50.3
+Barack Obama,Democrat,2010-03-01,48.6
+Barack Obama,Democrat,2010-04-01,48.5
+Barack Obama,Democrat,2010-05-01,48.3
+Barack Obama,Democrat,2010-06-01,46.5
+Barack Obama,Democrat,2010-07-01,45.7
+Barack Obama,Democrat,2010-08-01,44
+Barack Obama,Democrat,2010-09-01,45.2
+Barack Obama,Democrat,2010-10-01,45
+Barack Obama,Democrat,2010-11-01,45.1
+Barack Obama,Democrat,2010-12-01,45.9
+Barack Obama,Democrat,2011-01-01,49.2
+Barack Obama,Democrat,2011-02-01,47.6
+Barack Obama,Democrat,2011-03-01,46.8
+Barack Obama,Democrat,2011-04-01,44.1
+Barack Obama,Democrat,2011-05-01,49.5
+Barack Obama,Democrat,2011-06-01,46.4
+Barack Obama,Democrat,2011-07-01,44.1
+Barack Obama,Democrat,2011-08-01,40.6
+Barack Obama,Democrat,2011-09-01,41.1
+Barack Obama,Democrat,2011-10-01,41.1
+Barack Obama,Democrat,2011-11-01,42.7
+Barack Obama,Democrat,2011-12-01,42.8
+Barack Obama,Democrat,2012-01-01,44.9
+Barack Obama,Democrat,2012-02-01,45.5
+Barack Obama,Democrat,2012-03-01,46.5
+Barack Obama,Democrat,2012-04-01,47.5
+Barack Obama,Democrat,2012-05-01,47.4
+Barack Obama,Democrat,2012-06-01,46.5
+Barack Obama,Democrat,2012-07-01,45.8
+Barack Obama,Democrat,2012-08-01,45.1
+Barack Obama,Democrat,2012-09-01,48.7
+Barack Obama,Democrat,2012-10-01,50
+Barack Obama,Democrat,2012-11-01,51.3
+Barack Obama,Democrat,2012-12-01,52.8
+Barack Obama,Democrat,2013-01-01,52
+Barack Obama,Democrat,2013-02-01,51.5
+Barack Obama,Democrat,2013-03-01,47.9
+Barack Obama,Democrat,2013-04-01,49.3
+Barack Obama,Democrat,2013-05-01,49.2
+Barack Obama,Democrat,2013-06-01,47
+Barack Obama,Democrat,2013-07-01,46.1
+Barack Obama,Democrat,2013-08-01,45.2
+Barack Obama,Democrat,2013-09-01,44.3
+Barack Obama,Democrat,2013-10-01,42.9
+Barack Obama,Democrat,2013-11-01,41
+Barack Obama,Democrat,2013-12-01,41.2
+Barack Obama,Democrat,2014-01-01,41.2
+Barack Obama,Democrat,2014-02-01,41.8
+Barack Obama,Democrat,2014-03-01,42.4
+Barack Obama,Democrat,2014-04-01,43.8
+Barack Obama,Democrat,2014-05-01,44.2
+Barack Obama,Democrat,2014-06-01,42.3
+Barack Obama,Democrat,2014-07-01,42
+Barack Obama,Democrat,2014-08-01,41.7
+Barack Obama,Democrat,2014-09-01,41.6
+Barack Obama,Democrat,2014-10-01,41.6
+Barack Obama,Democrat,2014-11-01,41.9
+Barack Obama,Democrat,2014-12-01,43.9
+Barack Obama,Democrat,2015-01-01,46.6
+Barack Obama,Democrat,2015-02-01,45.7
+Barack Obama,Democrat,2015-03-01,46.3
+Barack Obama,Democrat,2015-04-01,46.8
+Barack Obama,Democrat,2015-05-01,46.5
+Barack Obama,Democrat,2015-06-01,45.7
+Barack Obama,Democrat,2015-07-01,45.8
+Barack Obama,Democrat,2015-08-01,45.5
+Barack Obama,Democrat,2015-09-01,46.6
+Barack Obama,Democrat,2015-10-01,46.2
+Barack Obama,Democrat,2015-11-01,47
+Barack Obama,Democrat,2015-12-01,45.8
+Barack Obama,Democrat,2016-01-01,47.5
+Barack Obama,Democrat,2016-02-01,47.9
+Barack Obama,Democrat,2016-03-01,50.8
+Barack Obama,Democrat,2016-04-01,50.3
+Barack Obama,Democrat,2016-05-01,51.3
+Barack Obama,Democrat,2016-06-01,51.5
+Barack Obama,Democrat,2016-07-01,50.3
+Barack Obama,Democrat,2016-08-01,51.4
+Barack Obama,Democrat,2016-09-01,51.8
+Barack Obama,Democrat,2016-10-01,53.6
+Barack Obama,Democrat,2016-11-01,55.6
+Barack Obama,Democrat,2016-12-01,55.7
+Donald Trump,Republican,2017-01-01,44
+Donald Trump,Republican,2017-02-01,41.6
+Donald Trump,Republican,2017-03-01,40.5
+Donald Trump,Republican,2017-04-01,40.6
+Donald Trump,Republican,2017-05-01,39.9
+Donald Trump,Republican,2017-06-01,37.9
+Donald Trump,Republican,2017-07-01,38
+Donald Trump,Republican,2017-08-01,35.7
+Donald Trump,Republican,2017-09-01,37.5
+Donald Trump,Republican,2017-10-01,36.7
+Donald Trump,Republican,2017-11-01,37.3
+Donald Trump,Republican,2017-12-01,36
+Donald Trump,Republican,2018-01-01,38
+Donald Trump,Republican,2018-02-01,39
+Donald Trump,Republican,2018-03-01,39
+Donald Trump,Republican,2018-04-01,41
+Donald Trump,Republican,2018-05-01,41
+Donald Trump,Republican,2018-06-01,42
+Donald Trump,Republican,2018-07-01,41
+Donald Trump,Republican,2018-08-01,41
+Donald Trump,Republican,2018-09-01,40
+Donald Trump,Republican,2018-10-01,42
+Donald Trump,Republican,2018-11-01,40
+Donald Trump,Republican,2018-12-01,39
+Donald Trump,Republican,2019-01-01,37
+Donald Trump,Republican,2019-02-01,43.5
+Donald Trump,Republican,2019-03-01,39
+Donald Trump,Republican,2019-04-01,45.5
+Donald Trump,Republican,2019-05-01,41
+Donald Trump,Republican,2019-06-01,42
+Donald Trump,Republican,2019-07-01,43
+Donald Trump,Republican,2019-08-01,40
+Donald Trump,Republican,2019-09-01,41.5
+Donald Trump,Republican,2019-10-01,40
+Donald Trump,Republican,2019-11-01,43
+Donald Trump,Republican,2019-12-01,45
+Donald Trump,Republican,2020-01-01,46.5
+Donald Trump,Republican,2020-02-01,48
+Donald Trump,Republican,2020-03-01,46.5
+Donald Trump,Republican,2020-04-01,46
+Donald Trump,Republican,2020-05-01,44
+Donald Trump,Republican,2020-06-01,38
+Donald Trump,Republican,2020-07-01,41.5
+Donald Trump,Republican,2020-08-01,42
+Donald Trump,Republican,2020-09-01,44.5
+Donald Trump,Republican,2020-10-01,44.5
+Donald Trump,Republican,2020-11-01,43
+Donald Trump,Republican,2020-12-01,39
+Donald Trump,Republican,2021-01-01,34
+Joe Biden,Democrat,2021-01-01,57
+Joe Biden,Democrat,2021-02-01,56
+Joe Biden,Democrat,2021-03-01,54
+Joe Biden,Democrat,2021-04-01,57
+Joe Biden,Democrat,2021-05-01,54
+Joe Biden,Democrat,2021-06-01,56
+Joe Biden,Democrat,2021-07-01,50
+Joe Biden,Democrat,2021-08-01,49
+Joe Biden,Democrat,2021-09-01,43
+Joe Biden,Democrat,2021-10-01,42
+Joe Biden,Democrat,2021-11-01,42
+Joe Biden,Democrat,2021-12-01,43
+Joe Biden,Democrat,2022-01-01,40
+Joe Biden,Democrat,2022-02-01,41
+Joe Biden,Democrat,2022-03-01,42
+Joe Biden,Democrat,2022-04-01,41
+Joe Biden,Democrat,2022-05-01,41
+Joe Biden,Democrat,2022-06-01,41
+Joe Biden,Democrat,2022-07-01,38
+Joe Biden,Democrat,2022-08-01,44
+Joe Biden,Democrat,2022-09-01,42
+Joe Biden,Democrat,2022-10-01,40
+Joe Biden,Democrat,2022-11-01,40
+Joe Biden,Democrat,2022-12-01,40
+Joe Biden,Democrat,2023-01-01,41
+Joe Biden,Democrat,2023-02-01,42
+Joe Biden,Democrat,2023-03-01,40
+Joe Biden,Democrat,2023-04-01,37
+Joe Biden,Democrat,2023-05-01,40
+Joe Biden,Democrat,2023-06-01,43
+Joe Biden,Democrat,2023-07-01,40
+Joe Biden,Democrat,2023-08-01,42
+Joe Biden,Democrat,2023-09-01,41
+Joe Biden,Democrat,2023-10-01,37
+Joe Biden,Democrat,2023-11-01,37
+Joe Biden,Democrat,2023-12-01,39
+Joe Biden,Democrat,2024-01-01,41
+Joe Biden,Democrat,2024-02-01,38
+Joe Biden,Democrat,2024-03-01,40
+Joe Biden,Democrat,2024-04-01,38
+Joe Biden,Democrat,2024-05-01,39
+Joe Biden,Democrat,2024-06-01,38
+Joe Biden,Democrat,2024-07-01,36
+Joe Biden,Democrat,2024-08-01,43
+Joe Biden,Democrat,2024-09-01,42
+Joe Biden,Democrat,2024-10-01,40
+Joe Biden,Democrat,2024-11-01,37
+Joe Biden,Democrat,2024-12-01,39
+Joe Biden,Democrat,2025-01-01,40

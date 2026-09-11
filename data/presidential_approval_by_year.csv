@@ -1,0 +1,82 @@
+president,party,calendar_year,year_in_term,approval
+Harry Truman,Democrat,1945,1,82
+Harry Truman,Democrat,1946,2,50
+Harry Truman,Democrat,1947,3,55
+Harry Truman,Democrat,1948,4,40
+Harry Truman,Democrat,1949,5,36
+Harry Truman,Democrat,1950,6,32
+Harry Truman,Democrat,1951,7,30
+Harry Truman,Democrat,1952,8,28
+Dwight Eisenhower,Republican,1953,1,68
+Dwight Eisenhower,Republican,1954,2,65
+Dwight Eisenhower,Republican,1955,3,71
+Dwight Eisenhower,Republican,1956,4,60
+Dwight Eisenhower,Republican,1957,5,65
+Dwight Eisenhower,Republican,1958,6,58
+Dwight Eisenhower,Republican,1959,7,64
+Dwight Eisenhower,Republican,1960,8,61
+John F. Kennedy,Democrat,1961,1,76
+John F. Kennedy,Democrat,1962,2,71
+John F. Kennedy,Democrat,1963,3,62
+Lyndon Johnson,Democrat,1964,1,75
+Lyndon Johnson,Democrat,1965,2,66
+Lyndon Johnson,Democrat,1966,3,50
+Lyndon Johnson,Democrat,1967,4,43
+Lyndon Johnson,Democrat,1968,5,40
+Richard Nixon,Republican,1969,1,62
+Richard Nixon,Republican,1970,2,57
+Richard Nixon,Republican,1971,3,50
+Richard Nixon,Republican,1972,4,56
+Richard Nixon,Republican,1973,5,45
+Richard Nixon,Republican,1974,6,25
+Gerald Ford,Republican,1974,1,53
+Gerald Ford,Republican,1975,2,45
+Gerald Ford,Republican,1976,3,48
+Jimmy Carter,Democrat,1977,1,62
+Jimmy Carter,Democrat,1978,2,45
+Jimmy Carter,Democrat,1979,3,38
+Jimmy Carter,Democrat,1980,4,39
+Ronald Reagan,Republican,1981,1,58
+Ronald Reagan,Republican,1982,2,44
+Ronald Reagan,Republican,1983,3,44
+Ronald Reagan,Republican,1984,4,56
+Ronald Reagan,Republican,1985,5,60
+Ronald Reagan,Republican,1986,6,63
+Ronald Reagan,Republican,1987,7,49
+Ronald Reagan,Republican,1988,8,57
+George H.W. Bush,Republican,1989,1,65
+George H.W. Bush,Republican,1990,2,70
+George H.W. Bush,Republican,1991,3,62
+George H.W. Bush,Republican,1992,4,40
+Bill Clinton,Democrat,1993,1,49
+Bill Clinton,Democrat,1994,2,46
+Bill Clinton,Democrat,1995,3,47
+Bill Clinton,Democrat,1996,4,55
+Bill Clinton,Democrat,1997,5,58
+Bill Clinton,Democrat,1998,6,64
+Bill Clinton,Democrat,1999,7,60
+Bill Clinton,Democrat,2000,8,62
+George W. Bush,Republican,2001,1,68
+George W. Bush,Republican,2002,2,72
+George W. Bush,Republican,2003,3,58
+George W. Bush,Republican,2004,4,50
+George W. Bush,Republican,2005,5,46
+George W. Bush,Republican,2006,6,37
+George W. Bush,Republican,2007,7,32
+George W. Bush,Republican,2008,8,30
+Barack Obama,Democrat,2009,1,57
+Barack Obama,Democrat,2010,2,47
+Barack Obama,Democrat,2011,3,44
+Barack Obama,Democrat,2012,4,48
+Barack Obama,Democrat,2013,5,46
+Barack Obama,Democrat,2014,6,45
+Barack Obama,Democrat,2015,7,48
+Barack Obama,Democrat,2016,8,51
+Donald Trump,Republican,2017,1,39
+Donald Trump,Republican,2018,2,40
+Donald Trump,Republican,2019,3,43
+Donald Trump,Republican,2020,4,41
+Joe Biden,Democrat,2021,1,49
+Joe Biden,Democrat,2022,2,41
+Joe Biden,Democrat,2023,3,40
+Joe Biden,Democrat,2024,4,39
