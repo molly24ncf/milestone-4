@@ -2,6 +2,43 @@
 title: "Presidential Approval Ratings"
 ---
 
-This is a Quarto website.
+```{r}
+#| message: false
+#| echo: false
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+library(tidyverse)
+
+# Clean percentage strings and order presidents by average rating
+approval_data <- read_csv("data/presidential_approval.csv", show_col_types = FALSE) |>
+  mutate(
+    Avg = parse_number(Avg),
+    President = fct_reorder(President, Avg),
+    Party = if_else(Party == "D", "Democrat", "Republican")
+  )
+
+# Simple horizontal bar chart of average approval ratings
+ggplot(approval_data, aes(x = Avg, y = President, fill = Party)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = paste0(Avg, "%")), hjust = -0.2, size = 3.5) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "grey50") +
+  scale_fill_manual(values = c("Democrat" = "#2E74C0", "Republican" = "#CB454A")) +
+  scale_x_continuous(
+    breaks = seq(0, 75, by = 5),
+    labels = \(x) paste0(x, "%"),
+    limits = c(0, 76),
+    expand = expansion(mult = c(0, 0.02))
+  ) +
+  labs(
+    title = "Average U.S. Presidential Approval Rating",
+    subtitle = "Dashed line indicates 50% approval mark",
+    x = "Average Approval Rating",
+    y = NULL,
+    fill = "Party",
+    caption = "Source: Dave Manuel (Gallup data)"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank()
+  )
+```
