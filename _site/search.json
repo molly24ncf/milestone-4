@@ -5,5 +5,26 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Presidential Approval Ratings",
+    "section": "",
+    "text": "Use the slider handles below the graph to pan and zoom across administrations:"
+  },
+  {
+    "objectID": "index.html#interactive-timeline",
+    "href": "index.html#interactive-timeline",
+    "title": "Presidential Approval Ratings",
+    "section": "",
+    "text": "Use the slider handles below the graph to pan and zoom across administrations:"
+  },
+  {
+    "objectID": "index.html#approval-by-administration",
+    "href": "index.html#approval-by-administration",
+    "title": "Presidential Approval Ratings",
+    "section": "Approval by Administration",
+    "text": "Approval by Administration"
   }
 ]
