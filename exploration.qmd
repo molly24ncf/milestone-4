@@ -2,7 +2,7 @@
 title: "Exploration"
 ---
 
-Use the dropdown menus below to select an administration and compare all three approval ratings over time: **Public Approval**, **Congressional Approval**, and **Party Favorability**. You can also click items in the legend or use the filter menu to toggle individual ratings on and off.
+Use the dropdown menus below to select an administration and compare ratings over time: **Public Approval**, **Congressional Approval**, and **Party Favorability**. Click **▶ Play Trend** to animate the ratings month-by-month over the president's term, or use the filter menu to toggle individual trends.
 
 ```{r}
 #| message: false
@@ -23,60 +23,82 @@ congress_data <- read_csv("data/congressional_approval_by_month.csv", show_col_t
 party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = FALSE) |>
   mutate(president = factor(president, levels = levels(monthly_data$president)))
 
-# Modern administrations where Gallup polled all three ratings
-presidents <- c("Bill Clinton", "George W. Bush", "Barack Obama", "Donald Trump", "Joe Biden")
+# All presidents from Harry Truman to Joe Biden
+presidents <- levels(monthly_data$president)
 
-make_plot <- function(pres) {
-  m <- monthly_data |> filter(president == pres) |> arrange(year_month)
-  c <- congress_data |> filter(president == pres) |> arrange(year_month)
-  p_sub <- party_data |> filter(president == pres) |> arrange(year_month)
+make_anim_plot <- function(pres) {
+  pres_raw <- monthly_data |> filter(president == pres)
+  pres_party <- pres_raw$party[1]
+  pub_color <- if (identical(pres_party, "Republican")) "#D9381E" else "#2E74C0"
 
-  plot_ly() |>
-    add_trace(
-      data = m,
-      x = ~year_month,
-      y = ~approval,
-      name = "Public Approval",
-      type = "scatter",
-      mode = "lines+markers",
-      line = list(color = "#2E74C0", width = 3),
-      marker = list(color = "#2E74C0", size = 5),
-      hovertemplate = paste0("<b>Public Approval</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
-    ) |>
-    add_trace(
-      data = c,
-      x = ~year_month,
-      y = ~approval,
-      name = "Congressional Approval",
-      type = "scatter",
-      mode = "lines+markers",
-      line = list(color = "#8338EC", width = 3),
-      marker = list(color = "#8338EC", size = 5),
-      connectgaps = TRUE,
-      hovertemplate = paste0("<b>Congressional Approval</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
-    ) |>
-    add_trace(
-      data = p_sub,
-      x = ~year_month,
-      y = ~favorability,
-      name = "Party Favorability",
-      type = "scatter",
-      mode = "lines+markers",
-      line = list(color = "#2E7D32", width = 3),
-      marker = list(color = "#2E7D32", size = 5),
-      connectgaps = TRUE,
-      hovertemplate = paste0("<b>Party Favorability</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
-    ) |>
+  m <- pres_raw |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Public Approval")
+  c <- congress_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Congressional Approval")
+  p_sub <- party_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = favorability) |> mutate(series = "Party Favorability")
+
+  dates <- unique(m$year_month)
+
+  avail_series <- list(
+    "Public Approval" = m,
+    "Congressional Approval" = c,
+    "Party Favorability" = p_sub
+  ) |> keep(\(df) nrow(df) > 0)
+
+  levels_order <- c("Public Approval", "Congressional Approval", "Party Favorability")
+  levels_present <- intersect(levels_order, names(avail_series))
+
+  cum_data <- map_dfr(dates, function(d) {
+    map_dfr(levels_present, function(sname) {
+      sub <- avail_series[[sname]] |> filter(year_month <= d)
+      if (nrow(sub) == 0) {
+        tibble(year_month = d, rating = NA_real_, series = sname)
+      } else {
+        sub
+      }
+    }) |> mutate(frame = as.character(d))
+  })
+  cum_data$series <- factor(cum_data$series, levels = levels_present)
+
+  colors_map <- c(
+    "Public Approval" = pub_color,
+    "Congressional Approval" = "#8338EC",
+    "Party Favorability" = "#2E7D32"
+  )
+
+  sub_text <- if (nrow(c) == 0 && nrow(p_sub) == 0) {
+    "Congressional and Party favorability polling had not yet begun during this administration"
+  } else if (nrow(p_sub) == 0) {
+    "Party favorability polling began in 1992"
+  } else {
+    ""
+  }
+
+  title_heading <- paste0("Ratings During Administration of ", pres, " (", pres_party, ")")
+
+  fig <- plot_ly(
+    cum_data,
+    x = ~year_month,
+    y = ~rating,
+    color = ~series,
+    colors = colors_map,
+    frame = ~frame,
+    type = "scatter",
+    mode = "lines+markers",
+    connectgaps = TRUE
+  ) |>
     layout(
       title = list(
-        text = paste("Ratings During Administration of", pres),
+        text = if (sub_text == "") {
+          title_heading
+        } else {
+          paste0(title_heading, "<br><sup>", sub_text, "</sup>")
+        },
         x = 0.5,
         xanchor = "center",
         y = 0.96,
         font = list(size = 17)
       ),
-      margin = list(t = 60, b = 60),
-      xaxis = list(title = "Date"),
+      margin = list(t = if (sub_text == "") 60 else 75, b = 60),
+      xaxis = list(title = "Date", range = c(min(dates), max(dates))),
       yaxis = list(title = "Rating (%)", range = c(0, 100)),
       shapes = list(
         list(
@@ -90,10 +112,53 @@ make_plot <- function(pres) {
         )
       ),
       legend = list(orientation = "h", x = 0.05, y = -0.2)
-    )
+    ) |>
+    animation_opts(frame = 80, transition = 40, easing = "linear") |>
+    animation_button(x = 0, y = -0.15, label = "▶ Play Trend") |>
+    animation_slider(currentvalue = list(prefix = "Date: ")) |>
+    config(displayModeBar = FALSE)
+
+  b <- suppressWarnings(plotly_build(fig))
+
+  # Ensure base traces match exact order of levels_present
+  last_f <- b$x$frames[[length(b$x$frames)]]$data
+  ordered_base <- list()
+  for (s in levels_present) {
+    for (tr in last_f) {
+      if (identical(tr$name, s)) {
+        ordered_base[[s]] <- tr
+      }
+    }
+  }
+  b$x$data <- unname(ordered_base)
+
+  # Animate ALL traces: explicitly assign trace indices and order frame data
+  k <- length(levels_present)
+  trace_indices <- as.integer(0:(k - 1))
+
+  b$x$frames <- lapply(b$x$frames, function(f) {
+    f$traces <- trace_indices
+    ordered_data <- list()
+    for (s in levels_present) {
+      for (tr in f$data) {
+        if (identical(tr$name, s)) {
+          ordered_data[[s]] <- tr
+          break
+        }
+      }
+    }
+    f$data <- unname(ordered_data)
+    f
+  })
+
+  if (length(b$x$layout$updatemenus) > 0 && length(b$x$layout$updatemenus[[1]]$buttons) > 0) {
+    b$x$layout$updatemenus[[1]]$buttons[[1]]$args[[2]]$fromcurrent <- FALSE
+  }
+  b$preRenderHook <- NULL
+  b
 }
 
-plots <- lapply(presidents, make_plot)
+plots <- lapply(presidents, make_anim_plot)
 
 tagList(
   tags$div(

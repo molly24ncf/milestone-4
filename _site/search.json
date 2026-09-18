@@ -4,13 +4,27 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "This page has been combined into the main Story page."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Story",
+    "section": "",
+    "text": "How do Americans view their leaders, and how does public sentiment toward the White House compare to attitudes toward Congress and political parties? By analyzing monthly Gallup polling data from 1993 to 2025, we can track how public approval, congressional approval, and party favorability interact across five presidential administrations."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Story",
+    "section": "About",
+    "text": "About\nThis project was developed for Milestone 4 in Preceptor’s Primer for Bayesian Data Science. It examines historical trends in American political sentiment using monthly polling series from Gallup.\n\nData Sources:\n\nPresidential job approval ratings (1945–2025) via Gallup and the American Presidency Project.\nCongressional job approval ratings (1974–2025) via Gallup Historical Trends.\nParty favorability ratings (1992–2024) via Gallup.\n\nInteractive Exploration: To view individual administration trends with month-by-month animations from Harry Truman to Joe Biden, visit the Exploration page."
   },
   {
     "objectID": "exploration.html",
     "href": "exploration.html",
     "title": "Exploration",
     "section": "",
-    "text": "Use the dropdown menus below to select an administration and compare all three approval ratings over time: Public Approval, Congressional Approval, and Party Favorability. You can also click items in the legend or use the filter menu to toggle individual ratings on and off.\n\n\n\n\nSelect President:\n\nBill Clinton\nGeorge W. Bush\nBarack Obama\nDonald Trump\nJoe Biden\n\n\n\nSelect Trend to Play:\n\nAll Ratings (Public, Congress, Party)\nPublic Approval\nCongressional Approval\nParty Favorability"
+    "text": "Use the dropdown menus below to select an administration and compare ratings over time: Public Approval, Congressional Approval, and Party Favorability. Click ▶ Play Trend to animate the ratings month-by-month over the president’s term, or use the filter menu to toggle individual trends.\n\n\n\n\nSelect President:\n\nHarry Truman\nDwight Eisenhower\nJohn F. Kennedy\nLyndon Johnson\nRichard Nixon\nGerald Ford\nJimmy Carter\nRonald Reagan\nGeorge H.W. Bush\nBill Clinton\nGeorge W. Bush\nBarack Obama\nDonald Trump\nJoe Biden\n\n\n\nSelect Trend to Play:\n\nAll Ratings (Public, Congress, Party)\nPublic Approval\nCongressional Approval\nParty Favorability"
   }
 ]

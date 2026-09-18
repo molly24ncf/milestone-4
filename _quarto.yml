@@ -1,14 +1,14 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "Presidential Approval Ratings"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Story
       - exploration.qmd
-      - about.qmd
 
 format:
   html:

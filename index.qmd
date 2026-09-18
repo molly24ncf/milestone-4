@@ -1,6 +1,8 @@
 ---
-title: "Presidential Approval Ratings"
+title: "Story"
 ---
+
+How do Americans view their leaders, and how does public sentiment toward the White House compare to attitudes toward Congress and political parties? By analyzing monthly Gallup polling data from 1945 to 2025, we can track how public approval, congressional approval, and party favorability interact across various presidential administrations.
 
 ```{r}
 #| message: false
@@ -67,3 +69,21 @@ ggplot() +
     plot.caption = element_text(color = "#888888", size = 8, margin = margin(t = 12))
   )
 ```
+
+### Key Patterns
+
+- **Presidential Approval:** Typically starts highest during an administration's early months, with notable surges during major national crises (such as late 2001) before trending toward polarized ranges.
+- **Congressional Approval:** Stays consistently below presidential ratings and regularly sits below 30%, reflecting longstanding public dissatisfaction with the legislative branch regardless of party control.
+- **Party Favorability:** Closely tracks broader partisan dynamics, showing increasing polarization and lower favorability over recent decades.
+
+---
+
+## About
+
+This project was developed for a deeper and more thorough examination of approval ratings and how they evolve over time. It examines historical trends in American political sentiment using monthly polling series from Gallup.
+
+- **Data Sources:** 
+  - Presidential job approval ratings (1945–2025) via Gallup and the American Presidency Project.
+  - Congressional job approval ratings (1974–2025) via Gallup Historical Trends.
+  - Party favorability ratings (1992–2024) via Gallup.
+- **Interactive Exploration:** To view individual administration trends with month-by-month animations from Harry Truman to Joe Biden, visit the [Exploration](exploration.qmd) page.
