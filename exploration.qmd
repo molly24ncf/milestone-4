@@ -2,7 +2,7 @@
 title: "Exploration"
 ---
 
-Use the dropdown menus below to select a president and choose which rating trend(s) to view. Click **▶ Play Trend** to animate public approval, congressional approval, and party favorability trends over time.
+Use the dropdown menus below to select an administration and compare all three approval ratings over time: **Public Approval**, **Congressional Approval**, and **Party Favorability**. You can also click items in the legend or use the filter menu to toggle individual ratings on and off.
 
 ```{r}
 #| message: false
@@ -23,67 +23,60 @@ congress_data <- read_csv("data/congressional_approval_by_month.csv", show_col_t
 party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = FALSE) |>
   mutate(president = factor(president, levels = levels(monthly_data$president)))
 
-presidents <- levels(monthly_data$president)
+# Modern administrations where Gallup polled all three ratings
+presidents <- c("Bill Clinton", "George W. Bush", "Barack Obama", "Donald Trump", "Joe Biden")
 
-make_anim_plot <- function(pres) {
-  m <- monthly_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Public Approval")
-  c <- congress_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Congressional Approval")
-  p_sub <- party_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = favorability) |> mutate(series = "Party Favorability")
+make_plot <- function(pres) {
+  m <- monthly_data |> filter(president == pres) |> arrange(year_month)
+  c <- congress_data |> filter(president == pres) |> arrange(year_month)
+  p_sub <- party_data |> filter(president == pres) |> arrange(year_month)
 
-  party_is_dem <- (monthly_data |> filter(president == pres) |> pull(party))[1] == "Democrat"
-  pres_col <- if (party_is_dem) "#2E74C0" else "#CB454A"
-
-  colors_map <- c(
-    "Public Approval" = pres_col,
-    "Congressional Approval" = "#7B2CBF",
-    "Party Favorability" = "#2E7D32"
-  )
-
-  dates <- unique(m$year_month)
-
-  avail_series <- list(
-    "Public Approval" = m,
-    "Congressional Approval" = c,
-    "Party Favorability" = p_sub
-  ) |> keep(\(df) nrow(df) > 0)
-
-  levels_order <- c("Public Approval", "Congressional Approval", "Party Favorability")
-  levels_present <- intersect(levels_order, names(avail_series))
-
-  cum_data <- map_dfr(dates, function(d) {
-    map_dfr(levels_present, function(sname) {
-      sub <- avail_series[[sname]] |> filter(year_month <= d)
-      if (nrow(sub) == 0) {
-        tibble(year_month = d, rating = NA_real_, series = sname)
-      } else {
-        sub
-      }
-    }) |> mutate(frame = as.character(d))
-  })
-
-  cum_data$series <- factor(cum_data$series, levels = levels_present)
-
-  fig <- plot_ly(
-    cum_data,
-    x = ~year_month,
-    y = ~rating,
-    color = ~series,
-    colors = colors_map,
-    frame = ~frame,
-    type = "scatter",
-    mode = "lines+markers",
-    connectgaps = TRUE
-  ) |>
+  plot_ly() |>
+    add_trace(
+      data = m,
+      x = ~year_month,
+      y = ~approval,
+      name = "Public Approval",
+      type = "scatter",
+      mode = "lines+markers",
+      line = list(color = "#2E74C0", width = 3),
+      marker = list(color = "#2E74C0", size = 5),
+      hovertemplate = paste0("<b>Public Approval</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
+    ) |>
+    add_trace(
+      data = c,
+      x = ~year_month,
+      y = ~approval,
+      name = "Congressional Approval",
+      type = "scatter",
+      mode = "lines+markers",
+      line = list(color = "#8338EC", width = 3),
+      marker = list(color = "#8338EC", size = 5),
+      connectgaps = TRUE,
+      hovertemplate = paste0("<b>Congressional Approval</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
+    ) |>
+    add_trace(
+      data = p_sub,
+      x = ~year_month,
+      y = ~favorability,
+      name = "Party Favorability",
+      type = "scatter",
+      mode = "lines+markers",
+      line = list(color = "#2E7D32", width = 3),
+      marker = list(color = "#2E7D32", size = 5),
+      connectgaps = TRUE,
+      hovertemplate = paste0("<b>Party Favorability</b>: %{y:.1f}%<br>Date: %{x}<extra></extra>")
+    ) |>
     layout(
       title = list(
         text = paste("Ratings During Administration of", pres),
         x = 0.5,
         xanchor = "center",
-        y = 0.98,
-        yanchor = "top"
+        y = 0.96,
+        font = list(size = 17)
       ),
-      margin = list(t = 70, b = 60),
-      xaxis = list(title = "Date", range = c(min(dates), max(dates))),
+      margin = list(t = 60, b = 60),
+      xaxis = list(title = "Date"),
       yaxis = list(title = "Rating (%)", range = c(0, 100)),
       shapes = list(
         list(
@@ -96,17 +89,11 @@ make_anim_plot <- function(pres) {
           line = list(color = "grey60", dash = "dash", width = 1)
         )
       ),
-      legend = list(orientation = "h", x = 0.05, y = -0.3)
-    ) |>
-    animation_opts(frame = 80, transition = 40, easing = "linear") |>
-    animation_button(x = 0, y = -0.15, label = "▶ Play Trend") |>
-    animation_slider(currentvalue = list(prefix = "Date: ")) |>
-    config(displayModeBar = FALSE)
-
-  fig
+      legend = list(orientation = "h", x = 0.05, y = -0.2)
+    )
 }
 
-plots <- lapply(presidents, make_anim_plot)
+plots <- lapply(presidents, make_plot)
 
 tagList(
   tags$div(
