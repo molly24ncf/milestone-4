@@ -26,10 +26,45 @@ party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = 
 # All presidents from Harry Truman to Joe Biden
 presidents <- levels(monthly_data$president)
 
+pres_terms <- c(
+  "Harry Truman" = "1945–1953",
+  "Dwight Eisenhower" = "1953–1961",
+  "John F. Kennedy" = "1961–1963",
+  "Lyndon Johnson" = "1963–1969",
+  "Richard Nixon" = "1969–1974",
+  "Gerald Ford" = "1974–1977",
+  "Jimmy Carter" = "1977–1981",
+  "Ronald Reagan" = "1981–1989",
+  "George H.W. Bush" = "1989–1993",
+  "Bill Clinton" = "1993–2001",
+  "George W. Bush" = "2001–2009",
+  "Barack Obama" = "2009–2017",
+  "Donald Trump" = "2017–2021",
+  "Joe Biden" = "2021–2025"
+)
+
+pres_images <- c(
+  "Harry Truman" = "images/presidents/truman.jpg",
+  "Dwight Eisenhower" = "images/presidents/eisenhower.jpg",
+  "John F. Kennedy" = "images/presidents/kennedy.jpg",
+  "Lyndon Johnson" = "images/presidents/johnson.jpg",
+  "Richard Nixon" = "images/presidents/nixon.jpg",
+  "Gerald Ford" = "images/presidents/ford.jpg",
+  "Jimmy Carter" = "images/presidents/carter.jpg",
+  "Ronald Reagan" = "images/presidents/reagan.jpg",
+  "George H.W. Bush" = "images/presidents/bush41.jpg",
+  "Bill Clinton" = "images/presidents/clinton.jpg",
+  "George W. Bush" = "images/presidents/bush43.jpg",
+  "Barack Obama" = "images/presidents/obama.jpg",
+  "Donald Trump" = "images/presidents/trump.jpg",
+  "Joe Biden" = "images/presidents/biden.jpg"
+)
+
 make_anim_plot <- function(pres) {
   pres_raw <- monthly_data |> filter(president == pres)
   pres_party <- pres_raw$party[1]
   pub_color <- if (identical(pres_party, "Republican")) "#D9381E" else "#2E74C0"
+  term_str <- pres_terms[pres]
 
   m <- pres_raw |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Public Approval")
   c <- congress_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Congressional Approval")
@@ -72,7 +107,7 @@ make_anim_plot <- function(pres) {
     ""
   }
 
-  title_heading <- paste0("Ratings During Administration of ", pres, " (", pres_party, ")")
+  title_heading <- paste0("Ratings During Administration of ", pres, " (", term_str, ") (", pres_party, ")")
 
   fig <- plot_ly(
     cum_data,
@@ -171,7 +206,8 @@ tagList(
         class = "form-select",
         onchange = "switchPresident(this.value)",
         lapply(seq_along(presidents), \(i) {
-          tags$option(value = paste0("pres-plot-", i), presidents[i])
+          p_name <- presidents[i]
+          tags$option(value = paste0("pres-plot-", i), paste0(p_name, " (", pres_terms[p_name], ")"))
         })
       )
     ),
@@ -190,10 +226,38 @@ tagList(
     )
   ),
   lapply(seq_along(presidents), \(i) {
+    p_name <- presidents[i]
+    p_term <- pres_terms[p_name]
+    p_img <- pres_images[p_name]
+    p_party <- monthly_data |> filter(president == p_name) |> pull(party) |> head(1)
+    badge_bg <- if (identical(p_party, "Republican")) "#D9381E" else "#2E74C0"
+
     tags$div(
       id = paste0("pres-plot-", i),
       class = "president-plot-container",
       style = if (i == 1) "display: block;" else "display: none;",
+      tags$div(
+        style = paste0("display: flex; align-items: center; gap: 18px; margin: 5px 0 20px 0; padding: 12px 18px; background-color: #f8f9fa; border: 1px solid #e9ecef; border-left: 5px solid ", badge_bg, "; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"),
+        tags$img(
+          src = p_img,
+          alt = paste(p_name, "portrait"),
+          style = "width: 80px; height: 100px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.18); border: 2px solid white;"
+        ),
+        tags$div(
+          tags$h3(style = "margin: 0 0 6px 0; font-size: 1.35rem; font-weight: 700; color: #212529;", paste0(p_name, " (", p_term, ")")),
+          tags$div(
+            style = "display: flex; align-items: center; gap: 10px; flex-wrap: wrap;",
+            tags$span(
+              style = paste0("display: inline-block; padding: 3px 12px; font-size: 0.85rem; font-weight: 600; color: #fff; background-color: ", badge_bg, "; border-radius: 12px;"),
+              p_party
+            ),
+            tags$span(
+              style = "color: #495057; font-size: 0.95rem; font-weight: 500;",
+              paste0("Term: (", p_term, ")")
+            )
+          )
+        )
+      ),
       plots[[i]]
     )
   }),
