@@ -2,7 +2,7 @@
 title: "Exploration"
 ---
 
-Use the dropdown menu below to select a president and explore presidential approval, congressional approval, and party favorability trends over their administration.
+Use the dropdown menus below to select a president and choose which rating trend(s) to view. Click **▶ Play Trend** to animate public approval, congressional approval, and party favorability trends over time.
 
 ```{r}
 #| message: false
@@ -11,6 +11,7 @@ Use the dropdown menu below to select a president and explore presidential appro
 
 library(tidyverse)
 library(plotly)
+library(htmltools)
 
 # Load monthly approval and favorability datasets
 monthly_data <- read_csv("data/presidential_approval_by_month.csv", show_col_types = FALSE) |>
@@ -24,119 +25,169 @@ party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = 
 
 presidents <- levels(monthly_data$president)
 
-fig <- plot_ly()
+make_anim_plot <- function(pres) {
+  m <- monthly_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Public Approval")
+  c <- congress_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = approval) |> mutate(series = "Congressional Approval")
+  p_sub <- party_data |> filter(president == pres) |> arrange(year_month) |> select(year_month, rating = favorability) |> mutate(series = "Party Favorability")
 
-# Add traces for each president (defaulting to the first president visible)
-for (i in seq_along(presidents)) {
-  pres <- presidents[i]
-  m_sub <- monthly_data |> filter(president == pres)
-  c_sub <- congress_data |> filter(president == pres)
-  p_sub <- party_data |> filter(president == pres)
+  party_is_dem <- (monthly_data |> filter(president == pres) |> pull(party))[1] == "Democrat"
+  pres_col <- if (party_is_dem) "#2E74C0" else "#CB454A"
 
-  is_visible <- (i == 1)
-  party_color <- if (m_sub$party[1] == "Democrat") "#2E74C0" else "#CB454A"
+  colors_map <- c(
+    "Public Approval" = pres_col,
+    "Congressional Approval" = "#7B2CBF",
+    "Party Favorability" = "#2E7D32"
+  )
 
-  fig <- fig |>
-    add_trace(
-      data = m_sub,
-      x = ~year_month,
-      y = ~approval,
-      name = paste(pres, "(President)"),
-      type = "scatter",
-      mode = "lines+markers",
-      line = list(color = party_color, width = 2.5),
-      marker = list(color = party_color, size = 5),
-      visible = is_visible,
-      hovertemplate = paste0("<b>", pres, "</b><br>Date: %{x}<br>Approval: %{y}%<extra></extra>")
+  dates <- unique(m$year_month)
+
+  avail_series <- list(
+    "Public Approval" = m,
+    "Congressional Approval" = c,
+    "Party Favorability" = p_sub
+  ) |> keep(\(df) nrow(df) > 0)
+
+  levels_order <- c("Public Approval", "Congressional Approval", "Party Favorability")
+  levels_present <- intersect(levels_order, names(avail_series))
+
+  cum_data <- map_dfr(dates, function(d) {
+    map_dfr(levels_present, function(sname) {
+      sub <- avail_series[[sname]] |> filter(year_month <= d)
+      if (nrow(sub) == 0) {
+        tibble(year_month = d, rating = NA_real_, series = sname)
+      } else {
+        sub
+      }
+    }) |> mutate(frame = as.character(d))
+  })
+
+  cum_data$series <- factor(cum_data$series, levels = levels_present)
+
+  fig <- plot_ly(
+    cum_data,
+    x = ~year_month,
+    y = ~rating,
+    color = ~series,
+    colors = colors_map,
+    frame = ~frame,
+    type = "scatter",
+    mode = "lines+markers",
+    connectgaps = TRUE
+  ) |>
+    layout(
+      title = list(
+        text = paste("Ratings During Administration of", pres),
+        x = 0.5,
+        xanchor = "center",
+        y = 0.98,
+        yanchor = "top"
+      ),
+      margin = list(t = 70, b = 60),
+      xaxis = list(title = "Date", range = c(min(dates), max(dates))),
+      yaxis = list(title = "Rating (%)", range = c(0, 100)),
+      shapes = list(
+        list(
+          type = "line",
+          y0 = 50,
+          y1 = 50,
+          x0 = 0,
+          x1 = 1,
+          xref = "paper",
+          line = list(color = "grey60", dash = "dash", width = 1)
+        )
+      ),
+      legend = list(orientation = "h", x = 0.05, y = -0.3)
     ) |>
-    add_trace(
-      data = c_sub,
-      x = ~year_month,
-      y = ~approval,
-      name = "Congress Approval",
-      type = "scatter",
-      mode = "lines+markers",
-      connectgaps = TRUE,
-      line = list(color = "#7B2CBF", width = 2),
-      marker = list(color = "#7B2CBF", size = 5),
-      visible = is_visible,
-      hovertemplate = "<b>Congress</b><br>Date: %{x}<br>Approval: %{y}%<extra></extra>"
-    ) |>
-    add_trace(
-      data = p_sub,
-      x = ~year_month,
-      y = ~favorability,
-      name = "Party Favorability",
-      type = "scatter",
-      mode = "lines+markers",
-      connectgaps = TRUE,
-      line = list(color = "#2E7D32", width = 2),
-      marker = list(color = "#2E7D32", size = 5),
-      visible = is_visible,
-      hovertemplate = "<b>Party Favorability</b><br>Date: %{x}<br>Favorability: %{y}%<extra></extra>"
-    )
+    animation_opts(frame = 80, transition = 40, easing = "linear") |>
+    animation_button(x = 0, y = -0.15, label = "▶ Play Trend") |>
+    animation_slider(currentvalue = list(prefix = "Date: ")) |>
+    config(displayModeBar = FALSE)
+
+  fig
 }
 
-# Create dropdown menu buttons for each president
-buttons <- lapply(seq_along(presidents), \(i) {
-  pres <- presidents[i]
-  vis <- rep(FALSE, length(presidents) * 3)
-  vis[(3 * (i - 1) + 1):(3 * i)] <- TRUE
+plots <- lapply(presidents, make_anim_plot)
 
-  list(
-    method = "update",
-    args = list(
-      list(visible = as.list(vis)),
-      list(
-        title = list(
-          text = paste("Ratings During Administration of", pres),
-          x = 0.5,
-          xanchor = "center"
-        ),
-        xaxis = list(title = "Date", autorange = TRUE)
+tagList(
+  tags$div(
+    style = "display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 25px;",
+    tags$div(
+      style = "min-width: 260px; max-width: 320px;",
+      tags$label(`for` = "presSelect", style = "font-weight: 600; margin-bottom: 6px; display: block;", "Select President:"),
+      tags$select(
+        id = "presSelect",
+        class = "form-select",
+        onchange = "switchPresident(this.value)",
+        lapply(seq_along(presidents), \(i) {
+          tags$option(value = paste0("pres-plot-", i), presidents[i])
+        })
       )
     ),
-    label = pres
-  )
-})
-
-# Layout configuration with dropdown menu, centered title, and 50% benchmark
-fig <- fig |>
-  layout(
-    title = list(
-      text = paste("Ratings During Administration of", presidents[1]),
-      x = 0.5,
-      xanchor = "center",
-      y = 0.98,
-      yanchor = "top"
-    ),
-    margin = list(t = 110, b = 60),
-    xaxis = list(title = "Date", autorange = TRUE),
-    yaxis = list(title = "Rating (%)", range = c(0, 100)),
-    shapes = list(
-      list(
-        type = "line",
-        y0 = 50,
-        y1 = 50,
-        x0 = 0,
-        x1 = 1,
-        xref = "paper",
-        line = list(color = "grey60", dash = "dash", width = 1)
+    tags$div(
+      style = "min-width: 260px; max-width: 320px;",
+      tags$label(`for` = "metricSelect", style = "font-weight: 600; margin-bottom: 6px; display: block;", "Select Trend to Play:"),
+      tags$select(
+        id = "metricSelect",
+        class = "form-select",
+        onchange = "filterMetric(this.value)",
+        tags$option(value = "all", "All Ratings (Public, Congress, Party)"),
+        tags$option(value = "public", "Public Approval"),
+        tags$option(value = "congress", "Congressional Approval"),
+        tags$option(value = "party", "Party Favorability")
       )
-    ),
-    updatemenus = list(
-      list(
-        type = "dropdown",
-        active = 0,
-        buttons = buttons,
-        x = 0.0,
-        y = 1.18,
-        xanchor = "left",
-        yanchor = "top"
-      )
-    ),
-    legend = list(orientation = "h", x = 0.1, y = -0.2)
-  )
+    )
+  ),
+  lapply(seq_along(presidents), \(i) {
+    tags$div(
+      id = paste0("pres-plot-", i),
+      class = "president-plot-container",
+      style = if (i == 1) "display: block;" else "display: none;",
+      plots[[i]]
+    )
+  }),
+  tags$script(HTML("
+    let currentContainerId = 'pres-plot-1';
 
-fig
+    function switchPresident(val) {
+      currentContainerId = val;
+      document.querySelectorAll('.president-plot-container').forEach(el => el.style.display = 'none');
+      const target = document.getElementById(val);
+      if (target) {
+        target.style.display = 'block';
+        window.dispatchEvent(new Event('resize'));
+        applyCurrentMetricFilter();
+      }
+    }
+
+    function filterMetric(metricVal) {
+      applyCurrentMetricFilter();
+    }
+
+    function applyCurrentMetricFilter() {
+      const metricSelect = document.getElementById('metricSelect');
+      if (!metricSelect) return;
+      const metricVal = metricSelect.value;
+      const container = document.getElementById(currentContainerId);
+      if (!container) return;
+      const plotEl = container.querySelector('.js-plotly-plot');
+      if (!plotEl || !plotEl.data) return;
+
+      const update = { visible: [] };
+      plotEl.data.forEach(trace => {
+        const name = (trace.name || '').toLowerCase();
+        if (metricVal === 'all') {
+          update.visible.push(true);
+        } else if (name.includes(metricVal)) {
+          update.visible.push(true);
+        } else {
+          update.visible.push('legendonly');
+        }
+      });
+
+      if (window.Plotly && update.visible.length > 0) {
+        Plotly.restyle(plotEl, update);
+      }
+    }
+  "))
+)
 ```
