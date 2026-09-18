@@ -26,9 +26,9 @@ party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = 
 ggplot(monthly_data, aes(x = year_month, y = approval)) +
   geom_line(aes(color = party), linewidth = 1.2) +
   geom_point(aes(color = party), size = 1.8, alpha = 0.8) +
-  geom_line(data = congress_data, aes(x = year_month, y = approval), color = "#7B2CBF", linetype = "dashed", linewidth = 1.2) +
+  geom_line(data = congress_data, aes(x = year_month, y = approval), color = "#7B2CBF", linewidth = 1.2) +
   geom_point(data = congress_data, aes(x = year_month, y = approval), color = "#7B2CBF", size = 1.8, alpha = 0.8) +
-  geom_line(data = party_data, aes(x = year_month, y = favorability), color = "#2E7D32", linetype = "dotdash", linewidth = 1.2) +
+  geom_line(data = party_data, aes(x = year_month, y = favorability), color = "#2E7D32", linewidth = 1.2) +
   geom_point(data = party_data, aes(x = year_month, y = favorability), color = "#2E7D32", size = 1.8, alpha = 0.8) +
   geom_hline(yintercept = 50, linetype = "dashed", color = "grey60", linewidth = 0.6) +
   scale_color_manual(values = c("Democrat" = "#2E74C0", "Republican" = "#CB454A")) +
@@ -41,7 +41,7 @@ ggplot(monthly_data, aes(x = year_month, y = approval)) +
   facet_wrap(~president, scales = "free_x", ncol = 2) +
   labs(
     title = "U.S. Presidential, Congressional, & Party Ratings (1945–2025)",
-    subtitle = "Presidential approval by party (solid line), Congressional approval (dashed purple line), & Party favorability (dot-dash green line); gray line marks 50%",
+    subtitle = "Presidential approval by party (blue/red), Congressional approval (purple), & Party favorability (green); gray line marks 50%",
     x = "Date",
     y = "Rating",
     color = "Party",

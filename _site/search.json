@@ -7,24 +7,10 @@
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Presidential Approval Ratings",
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "Exploration",
     "section": "",
-    "text": "Use the slider handles below the graph to pan and zoom across administrations:"
-  },
-  {
-    "objectID": "index.html#interactive-timeline",
-    "href": "index.html#interactive-timeline",
-    "title": "Presidential Approval Ratings",
-    "section": "",
-    "text": "Use the slider handles below the graph to pan and zoom across administrations:"
-  },
-  {
-    "objectID": "index.html#approval-by-administration",
-    "href": "index.html#approval-by-administration",
-    "title": "Presidential Approval Ratings",
-    "section": "Approval by Administration",
-    "text": "Approval by Administration"
+    "text": "Use the dropdown menu below to select a president and explore presidential approval, congressional approval, and party favorability trends over their administration."
   }
 ]

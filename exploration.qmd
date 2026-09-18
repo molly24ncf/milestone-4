@@ -1,0 +1,142 @@
+---
+title: "Exploration"
+---
+
+Use the dropdown menu below to select a president and explore presidential approval, congressional approval, and party favorability trends over their administration.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(plotly)
+
+# Load monthly approval and favorability datasets
+monthly_data <- read_csv("data/presidential_approval_by_month.csv", show_col_types = FALSE) |>
+  mutate(president = fct_reorder(president, year_month, .fun = min))
+
+congress_data <- read_csv("data/congressional_approval_by_month.csv", show_col_types = FALSE) |>
+  mutate(president = factor(president, levels = levels(monthly_data$president)))
+
+party_data <- read_csv("data/party_favorability_by_month.csv", show_col_types = FALSE) |>
+  mutate(president = factor(president, levels = levels(monthly_data$president)))
+
+presidents <- levels(monthly_data$president)
+
+fig <- plot_ly()
+
+# Add traces for each president (defaulting to the first president visible)
+for (i in seq_along(presidents)) {
+  pres <- presidents[i]
+  m_sub <- monthly_data |> filter(president == pres)
+  c_sub <- congress_data |> filter(president == pres)
+  p_sub <- party_data |> filter(president == pres)
+
+  is_visible <- (i == 1)
+  party_color <- if (m_sub$party[1] == "Democrat") "#2E74C0" else "#CB454A"
+
+  fig <- fig |>
+    add_trace(
+      data = m_sub,
+      x = ~year_month,
+      y = ~approval,
+      name = paste(pres, "(President)"),
+      type = "scatter",
+      mode = "lines+markers",
+      line = list(color = party_color, width = 2.5),
+      marker = list(color = party_color, size = 5),
+      visible = is_visible,
+      hovertemplate = paste0("<b>", pres, "</b><br>Date: %{x}<br>Approval: %{y}%<extra></extra>")
+    ) |>
+    add_trace(
+      data = c_sub,
+      x = ~year_month,
+      y = ~approval,
+      name = "Congress Approval",
+      type = "scatter",
+      mode = "lines+markers",
+      connectgaps = TRUE,
+      line = list(color = "#7B2CBF", width = 2),
+      marker = list(color = "#7B2CBF", size = 5),
+      visible = is_visible,
+      hovertemplate = "<b>Congress</b><br>Date: %{x}<br>Approval: %{y}%<extra></extra>"
+    ) |>
+    add_trace(
+      data = p_sub,
+      x = ~year_month,
+      y = ~favorability,
+      name = "Party Favorability",
+      type = "scatter",
+      mode = "lines+markers",
+      connectgaps = TRUE,
+      line = list(color = "#2E7D32", width = 2),
+      marker = list(color = "#2E7D32", size = 5),
+      visible = is_visible,
+      hovertemplate = "<b>Party Favorability</b><br>Date: %{x}<br>Favorability: %{y}%<extra></extra>"
+    )
+}
+
+# Create dropdown menu buttons for each president
+buttons <- lapply(seq_along(presidents), \(i) {
+  pres <- presidents[i]
+  vis <- rep(FALSE, length(presidents) * 3)
+  vis[(3 * (i - 1) + 1):(3 * i)] <- TRUE
+
+  list(
+    method = "update",
+    args = list(
+      list(visible = as.list(vis)),
+      list(
+        title = list(
+          text = paste("Ratings During Administration of", pres),
+          x = 0.5,
+          xanchor = "center"
+        ),
+        xaxis = list(title = "Date", autorange = TRUE)
+      )
+    ),
+    label = pres
+  )
+})
+
+# Layout configuration with dropdown menu, centered title, and 50% benchmark
+fig <- fig |>
+  layout(
+    title = list(
+      text = paste("Ratings During Administration of", presidents[1]),
+      x = 0.5,
+      xanchor = "center",
+      y = 0.98,
+      yanchor = "top"
+    ),
+    margin = list(t = 110, b = 60),
+    xaxis = list(title = "Date", autorange = TRUE),
+    yaxis = list(title = "Rating (%)", range = c(0, 100)),
+    shapes = list(
+      list(
+        type = "line",
+        y0 = 50,
+        y1 = 50,
+        x0 = 0,
+        x1 = 1,
+        xref = "paper",
+        line = list(color = "grey60", dash = "dash", width = 1)
+      )
+    ),
+    updatemenus = list(
+      list(
+        type = "dropdown",
+        active = 0,
+        buttons = buttons,
+        x = 0.0,
+        y = 1.18,
+        xanchor = "left",
+        yanchor = "top"
+      )
+    ),
+    legend = list(orientation = "h", x = 0.1, y = -0.2)
+  )
+
+fig
+```
